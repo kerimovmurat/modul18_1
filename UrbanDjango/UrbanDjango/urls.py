@@ -20,6 +20,7 @@ from task2.views import index, index2
 # from task3.views import index, index2, index3
 from task4.views import index, index2, index3
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
@@ -28,7 +29,7 @@ urlpatterns = [
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index.as_view()),
+    path('', index),
     path('med/', index2.as_view()),
     path('vit/', index3.as_view()),
 ]
