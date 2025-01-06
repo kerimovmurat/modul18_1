@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from task2.views import index, index2
+# from task2.views import index, index2
 # from task3.views import index, index2, index3
 from task4.views import index, index2, index3
+from task5.views import sign_up_by_html, sign_up_by_django
 
 
 urlpatterns = [
@@ -32,4 +33,10 @@ urlpatterns = [
     path('', index),
     path('med/', index2.as_view()),
     path('vit/', index3.as_view()),
+]
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', sign_up_by_html),
+    path('django_sign_up/', sign_up_by_django),
 ]
